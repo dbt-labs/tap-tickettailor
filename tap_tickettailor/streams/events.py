@@ -5,9 +5,13 @@ LOGGER = singer.get_logger()  # noqa
 
 
 class EventsStream(BaseStream):
-    API_METHOD = 'events'
+    API_METHOD = 'GET'
     TABLE = 'events'
     KEY_PROPERTIES = ['id']
 
     def response_key(self):
         return 'data'
+
+    @property
+    def path(self):
+        return '/events'

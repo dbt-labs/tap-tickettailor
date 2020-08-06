@@ -7,6 +7,7 @@ import base64
 
 
 from tap_framework.client import BaseClient
+from requests.auth import HTTPBasicAuth
 
 
 LOGGER = singer.get_logger()
@@ -25,12 +26,10 @@ class TicketTailorClient(BaseClient):
     def get_authorization(self):
         pass
 
-    def fetch(self, url, method, params, base_backoff=45):
+    def make_request(self, url, method, params, base_backoff=45, body=None):
         LOGGER.info("Making {} request to {}".format(method, url))
 
-        headers = {
-            "Authorization": "Basic {}".format(self.token)
-        }
+        headers = {}
 
         if self.user_agent:
             headers['User-Agent'] = self.user_agent
@@ -39,7 +38,7 @@ class TicketTailorClient(BaseClient):
             method,
             url,
             params=params,
-            headers=headers,
+            auth=HTTPBasicAuth(self.token, '')
         )
 
         LOGGER.info("Received response ({}) from server".format(response.status_code))

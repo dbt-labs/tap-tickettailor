@@ -19,66 +19,52 @@
                 "string"
             ]
         },
+        "buyer_details": {
+            "type": [
+                "null",
+                "object"
+            ]
+        },
         "created_at": {
             "type": [
                 "null",
                 "integer"
             ]
         },
-        "custom_questions": {
+        "currency": {
             "type": [
-               "null",
-               "array"
-            ],
-            "items": {
-              "type": "object",
-              "properties": {
-                  "question": {
-                      "type": "string"
-                  },
-                  "answer": {
-                      "type": [
-                          "null",
-                          "string"
-                    ]
-                 }
-              }
-           }
+                "null",
+                "object"
+            ]
         },
-        "description": {
+        "event_summary": {
+            "type": [
+                "null",
+                "object"
+            ]
+        },
+        "issued_tickets": {
+            "type": [
+                "null",
+                "array"
+            ]
+        },
+        "line_items": {
+            "type": [
+                "null",
+                "object"
+            ]
+        },
+        "payment_method": {
             "type": [
                 "null",
                 "string"
             ]
         },
-        "email": {
+        "refund_amount": {
             "type": [
                 "null",
-                "string"
-            ]
-        },
-        "event_id": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "full_name": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "first_name": {
-            "type": [
-                "null",
-                "string"
-            ]
-        },
-        "last_name": {
-            "type": [
-                "null",
-                "string"
+                "integer"
             ]
         },
         "status": {
@@ -87,25 +73,31 @@
                 "string"
             ]
         },
-        "updated_at": {
-            "type": [
-                "null",
-                "integer"
-            ]
-        },
-        "voided_at": {
-            "type": [
-                "null",
-                "integer"
-            ]
-        },
-        "order_id": {
+        "status_message": {
             "type": [
                 "null",
                 "string"
             ]
         },
-        "qr_code_url": {
+        "subtotal": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "tax": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "total": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "txn_id": {
             "type": [
                 "null",
                 "string"

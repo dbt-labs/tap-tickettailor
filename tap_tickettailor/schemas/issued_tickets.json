@@ -90,6 +90,12 @@
                 "string"
             ]
         },
+        "ticket_type_id" : {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
         "updated_at": {
             "type": [
                 "null",

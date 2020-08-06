@@ -14,15 +14,16 @@ LOGGER = singer.get_logger()
 class BaseStream(base):
     KEY_PROPERTIES = ['id']
     CACHE = False
+    BASE_URL = 'https://api.tickettailor.com/v1'
 
     def get_params(self):
-        return {}
+        params = {"limit": 100}
 
-    def sync_paginated(self, params):
+    def sync_paginated(self, base_url, cursor, params):
         table = self.TABLE
 
         while True:
-            response = self.client.make_request(self.API_METHOD, params)
+            response = self.client.make_request(base_url + cursor, 'get', params=params)
             transformed = self.get_stream_data(response)
 
             with singer.metrics.record_counter(endpoint=table) as counter:
@@ -32,11 +33,11 @@ class BaseStream(base):
             if self.CACHE:
                 stream_cache[table].extend(transformed)
 
-            meta = response.get('response_metadata', {})
-            next_cursor = meta.get('next_cursor', '')
+            meta = response.get('links', {})
+            next_cursor = meta.get('next', '')
 
-            if len(next_cursor) > 0:
-                params['cursor'] = next_cursor
+            if next_cursor:
+                cursor = next_cursor
             else:
                 break
 
@@ -44,7 +45,7 @@ class BaseStream(base):
         table = self.TABLE
         LOGGER.info('Syncing data for {}'.format(table))
         params = self.get_params()
-        self.sync_paginated(params)
+        self.sync_paginated(self.BASE_URL, self.path, params)
 
         return self.state
 
