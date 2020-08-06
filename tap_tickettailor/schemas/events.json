@@ -1,0 +1,391 @@
+{
+    "type": "object",
+    "properties": {
+        "object": {
+            "type": "string"
+        },
+        "id": {
+            "type": "string"
+        },
+        "access_code": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "call_to_action": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "created_at": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "currency": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "end": {
+            "type": "object",
+            "properties": {
+                "date": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "formatted": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "iso": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "time": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "timezone": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "unix": {
+                    "type": [
+                        "null",
+                        "integer"
+                    ]
+                }
+            }
+        },
+        "images": {
+            "type": "object",
+            "properties": {
+                "header": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "thumbnail": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                }
+            }
+        },
+        "name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "online_event": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "payment_methods": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "external_id": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "id": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "instructions": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "name": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "type": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                }
+            }
+        },
+        "private": {
+            "type": [
+                  "null",
+                  "string"
+              ]
+        },
+        "start": {
+            "type": "object",
+            "properties": {
+                "date": {
+                    "type": [
+                      "null",
+                      "string"
+                  ]
+                },
+                "formatted": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "iso": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "time": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "timezone": {
+                    "type": [
+                        "null",
+                        "string"
+                    ]
+                },
+                "unix": {
+                    "type": [
+                        "null",
+                        "integer"
+                    ]
+                }
+            }
+        },
+        "status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "ticket_groups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "max_per_order": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "sort_order": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "ticket_ids": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": [
+                                "null",
+                                "string"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "ticket_types": {
+            "type": [
+                "array",
+                "null"
+            ],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "object": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "access_code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "booking_fee": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "description": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "group_id": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "max_per_order": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "min_per_order": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "name": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "price": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "sort_order": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    },
+                    "type": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "quantity": {
+                        "type": [
+                            "null",
+                            "integer"
+                        ]
+                    }
+                }
+            }
+        },
+        "tickets_available": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "timezone": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "total_issued_tickets": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "total_orders": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "url": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "venue": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": [
+                      "null",
+                      "string"
+                  ]
+                },
+                "postal_code": {
+                    "type": [
+                      "null",
+                      "string"
+                  ]
+                }
+            }
+        }
+    }
+}

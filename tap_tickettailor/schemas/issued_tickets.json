@@ -1,0 +1,118 @@
+{
+    "type": "object",
+    "properties": {
+        "object": {
+           "type": "string"
+        },
+        "id": {
+           "type": "string"
+        },
+        "barcode": {
+           "type": [
+               "null",
+               "string"
+           ]
+        },
+        "barcode_url": {
+           "type": [
+               "null",
+               "string"
+           ]
+        },
+        "created_at": {
+           "type": "integer"
+        },
+        "custom_questions": {
+            "type": [
+                "null",
+                "array"
+            ],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "question": {
+                        "type": "string"
+                    },
+                    "answer": {
+                        "type": [
+                            "null",
+                            "string"
+                      ]
+                    }
+                }
+            }
+        },
+        "description": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "email": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "event_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "full_name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "first_name": {
+            "type": [
+                "null",
+                "string"
+           ]
+        },
+        "last_name": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "reservation": {
+            "type": [
+                "null",
+                "integer"
+            ]
+        },
+        "status": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "updated_at": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "voided_at": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "order_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "qr_code_url": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+     }
+}
