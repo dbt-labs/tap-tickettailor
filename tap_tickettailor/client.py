@@ -22,6 +22,9 @@ class TicketTailorClient(BaseClient):
         self.user_agent = self.config.get('user_agent')
         self.token = self.config.get('token')
 
+    def get_authorization(self):
+        pass
+
     def fetch(self, url, method, params, base_backoff=45):
         LOGGER.info("Making {} request to {}".format(method, url))
 

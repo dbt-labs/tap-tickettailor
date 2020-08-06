@@ -1,7 +1,9 @@
 {
     "type": "object",
     "properties": {
-        "object": "issued_ticket",
+        "object": {
+            "type": "string"
+        },
         "id": {
             "type": "string"
         },
