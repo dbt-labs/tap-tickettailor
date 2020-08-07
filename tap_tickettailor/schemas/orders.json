@@ -23,7 +23,31 @@
             "type": [
                 "null",
                 "object"
-            ]
+            ],
+            "properties": {
+                "address": {
+                    "type": ["null", "object"],
+                    "properties": {
+                        "address_1": { "type": ["null", "string"] },
+                        "address_2": { "type": ["null", "string"] },
+                        "address_3": { "type": ["null", "string"] },
+                        "postal_code": { "type": ["null", "string"] }
+                    }
+                },
+                "custom_questions": {
+                    "type": ["array", "null"],
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "question": { "type": "string" },
+                            "answer": { "type": ["null", "string" ] }
+                        }
+                    }
+                },
+                "email": { "type": ["null", "string"] },
+                "name": { "type": ["null", "string"] },
+                "phone": { "type": ["null", "string"] }
+            }
         },
         "created_at": {
             "type": [
@@ -32,34 +56,66 @@
             ]
         },
         "currency": {
-            "type": [
-                "null",
-                "object"
-            ]
+            "type": [ "null", "object" ],
+            "properties": {
+                "base_multiplier": {"type": ["null", "integer"]},
+                "code": {"type": ["null", "string"]}
+            }
         },
         "event_summary": {
-            "type": [
-                "null",
-                "object"
-            ]
-        },
-        "issued_tickets": {
-            "type": [
-                "null",
-                "array"
-            ]
+            "type": ["null", "object"],
+            "properties": {
+                "id": {"type": ["null", "string"]},
+                "end_date": {
+                    "type": ["null", "object"],
+                    "properties": {
+                        "date": {"type": ["null", "string"]},
+                        "formatted": {"type": ["null", "string"]},
+                        "iso": {"type": ["null", "string"]},
+                        "time": {"type": ["null", "string"]},
+                        "timezone": {"type": ["null", "string"]},
+                        "unix": {"type": ["null", "integer"]}
+                    }
+                },
+                "name": {"type": ["null", "string"]},
+                "start_date": {
+                    "type": ["null", "object"],
+                    "properties": {
+                        "date": {"type": ["null", "string"]},
+                        "formatted": {"type": ["null", "string"]},
+                        "iso": {"type": ["null", "string"]},
+                        "time": {"type": ["null", "string"]},
+                        "timezone": {"type": ["null", "string"]},
+                        "unix": {"type": ["null", "integer"]}
+                    }
+                }
+            }
         },
         "line_items": {
-            "type": [
-                "null",
-                "object"
-            ]
+            "type": ["null", "array"],
+            "items": {
+                "type": ["null", "object"],
+                "properties": {
+                    "object": {"type": ["null", "string"]},
+                    "id": {"type": ["null", "string"]},
+                    "booking_fee": {"type": ["null", "integer"]},
+                    "description": {"type": ["null", "string"]},
+                    "type": {"type": ["null", "string"]},
+                    "total": {"type": ["null", "integer"]},
+                    "value": {"type": ["null", "integer"]},
+                    "quantity": {"type": ["null", "integer"]}
+                }
+            }
         },
         "payment_method": {
-            "type": [
-                "null",
-                "string"
-            ]
+            "type": ["null", "object"],
+            "properties": {
+                "external_id": {"type": ["null", "string"]},
+                "id": {"type": ["null", "string"]},
+                "instructions": {"type": ["null", "string"]},
+                "name": {"type": ["null", "string"]},
+                "type": {"type": ["null", "string"]}
+            }
         },
         "refund_amount": {
             "type": [

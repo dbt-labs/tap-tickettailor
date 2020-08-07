@@ -12,16 +12,15 @@ from requests.auth import HTTPBasicAuth
 
 LOGGER = singer.get_logger()
 
-API_ENDPOINT = 'https://api.tickettailor.com'
+API_ENDPOINT = "https://api.tickettailor.com"
 
 
 class TicketTailorClient(BaseClient):
-
     def __init__(self, config):
         super().__init__(config)
 
-        self.user_agent = self.config.get('user_agent')
-        self.token = self.config.get('token')
+        self.user_agent = self.config.get("user_agent")
+        self.token = self.config.get("token")
 
     def get_authorization(self):
         pass
@@ -32,25 +31,25 @@ class TicketTailorClient(BaseClient):
         headers = {}
 
         if self.user_agent:
-            headers['User-Agent'] = self.user_agent
+            headers["User-Agent"] = self.user_agent
 
         response = requests.request(
-            method,
-            url,
-            params=params,
-            auth=HTTPBasicAuth(self.token, '')
+            method, url, params=params, auth=HTTPBasicAuth(self.token, "")
         )
 
         LOGGER.info("Received response ({}) from server".format(response.status_code))
 
         if response.status_code in [429, 504]:
-            LOGGER.info('Got a 429, sleeping for {} seconds and trying again'
-                        .format(base_backoff))
+            LOGGER.info(
+                "Got a 429, sleeping for {} seconds and trying again".format(
+                    base_backoff
+                )
+            )
             time.sleep(base_backoff)
             return self.public_fetch(url, method, params, base_backoff * 2)
 
         if response.status_code == 404:
-            LOGGER.info('Got a 404, no data is available')
+            LOGGER.info("Got a 404, no data is available")
             return None
 
         if response.status_code != 200:

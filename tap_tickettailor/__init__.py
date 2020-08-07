@@ -16,7 +16,7 @@ class TicketTailorRunner(tap_framework.Runner):
 
 @singer.utils.handle_top_exception(LOGGER)
 def main():
-    args = singer.utils.parse_args(required_config_keys=['token'])
+    args = singer.utils.parse_args(required_config_keys=["token"])
     client = TicketTailorClient(args.config)
     runner = TicketTailorRunner(args, client, AVAILABLE_STREAMS)
 
@@ -26,5 +26,5 @@ def main():
         runner.do_sync()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
