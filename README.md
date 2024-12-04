@@ -1,3 +1,15 @@
+# ***Archival Notice***
+This repository has been archived.
+
+As a result all of its historical issues and PRs have been closed.
+
+Please *do not clone* this repo without understanding the risk in doing so:
+- It may have unaddressed security vulnerabilities
+- It may have unaddressed bugs
+
+<details>
+   <summary>Click for historical readme</summary>
+
 # tap-tickettailor
 
 Author: Claire Carroll (claire@fishtownanalytics.com)
@@ -45,4 +57,5 @@ Step 4 generates a a file called `catalog.json` that specifies all the available
 tap-tickettailor -c config.json --catalog catalog.json
 ```
 
-Copyright &copy; 2020 Fishtown Analytics
+Copyright &amp;copy; 2020 Fishtown Analytics
+
